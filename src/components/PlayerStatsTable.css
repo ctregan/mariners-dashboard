@@ -1,0 +1,219 @@
+.player-stats-table-section {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.player-stats-table-section h2 {
+  color: #005C5C;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid #C4CED4;
+  padding-bottom: 8px;
+}
+
+.level-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.level-tab {
+  padding: 10px 20px;
+  border: none;
+  background: transparent;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.level-tab:hover {
+  color: #005C5C;
+  background: rgba(0, 92, 92, 0.05);
+}
+
+.level-tab.active {
+  color: #005C5C;
+  border-bottom-color: #005C5C;
+  background: rgba(0, 92, 92, 0.1);
+}
+
+.level-tab:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.loading-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  font-style: italic;
+}
+
+.error-message {
+  text-align: center;
+  padding: 20px;
+  color: #721c24;
+  background: #f8d7da;
+  border-radius: 8px;
+  border: 1px solid #f1b7bd;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.tables-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.table-section h3 {
+  color: #005C5C;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.table-container {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  background: white;
+}
+
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.stats-table th {
+  background: #f8f9fa;
+  color: #495057;
+  font-weight: 600;
+  padding: 12px 8px;
+  text-align: left;
+  border-bottom: 2px solid #dee2e6;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.stats-table th:hover {
+  background: #e9ecef;
+}
+
+.stats-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #e9ecef;
+  text-align: left;
+}
+
+.stats-table tbody tr:hover {
+  background: rgba(0, 92, 92, 0.05);
+}
+
+.stats-table tbody tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.stats-table tbody tr:nth-child(even):hover {
+  background: rgba(0, 92, 92, 0.08);
+}
+
+.player-name {
+  font-weight: 600;
+  color: #005C5C;
+  min-width: 150px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .stats-table {
+    font-size: 0.8rem;
+  }
+  
+  .stats-table th,
+  .stats-table td {
+    padding: 8px 6px;
+  }
+}
+
+@media (max-width: 968px) {
+  .level-tabs {
+    flex-wrap: wrap;
+  }
+  
+  .level-tab {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  
+  .stats-table {
+    font-size: 0.75rem;
+  }
+  
+  .stats-table th,
+  .stats-table td {
+    padding: 6px 4px;
+  }
+}
+
+@media (max-width: 768px) {
+  .player-stats-table-section {
+    padding: 15px;
+  }
+  
+  .tables-container {
+    gap: 20px;
+  }
+  
+  .table-container {
+    border-radius: 6px;
+  }
+  
+  .stats-table th {
+    font-size: 0.75rem;
+  }
+  
+  .player-name {
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .player-stats-table-section {
+    padding: 10px;
+  }
+  
+  .level-tab {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .stats-table {
+    font-size: 0.7rem;
+  }
+  
+  .stats-table th,
+  .stats-table td {
+    padding: 4px 3px;
+  }
+  
+  .player-name {
+    min-width: 100px;
+  }
+  
+  .table-section h3 {
+    font-size: 1rem;
+  }
+}
